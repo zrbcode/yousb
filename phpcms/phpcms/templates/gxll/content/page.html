@@ -1,0 +1,46 @@
+{template "content","header_page"}
+<!--main-->
+<div class="container">
+	<div class="P10"></div>
+    <div class="contentbox">	  
+      <div class="sidebar left">
+        <div class="box bot">
+          <div class="sidebar_tit">{$CATEGORYS[$CAT[parentid]][catname]}</div>
+          <div class="Btop sidenav">
+          	<ul>
+			  {pc:content action="category" catid="$parentid" num="15" siteid="$siteid" order="listorder ASC"}
+             {loop $data $r}
+             <LI><A href="{$r[url]}">{$r[catname]}</A> </LI>
+             {/loop}
+             {/pc}
+            </ul>
+          </div>
+        </div>
+        <div class="box">
+          <div class="sidebar_tit">专题栏目</div>
+          <div class="Btop sidesp">
+          	<ul>
+            {pc:content action="category" catid="15" siteid="$siteid" num="4" order="listorder ASC"}
+             {loop $data $r} 
+	         <LI><a title="$r[title]" href="{$r[url]}" target=_blank><IMG src={thumb($r[image],194,60)} width="190" height="56"></a></LI>
+	         {/loop}
+	        {/pc}
+          </ul>
+          </div>
+</div>      </div>
+      <div class="main right">
+        <div class="box">
+          <div class="main_tit">
+            <div class="txt left">{$title}</div>            
+</div>
+          <div class="show" id="Article"><div class="content">
+		  {$content}
+</div></div>
+        </div>
+        </div>
+      
+      
+    </div>
+    <div class="P10 PT"></div>
+</div>
+{template "content","footer2"}

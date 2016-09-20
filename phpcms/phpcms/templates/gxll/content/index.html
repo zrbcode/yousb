@@ -1,0 +1,205 @@
+﻿{template "content","header"}
+<!--main-->
+<DIV class=container>
+<DIV class="ads960 bot">
+<SCRIPT language=javascript src="{JS_PATH}statics/js/2.js"></SCRIPT>
+</DIV>
+<DIV class="contentbox bot">
+<DIV class="FocusPicBox left">
+<DIV class=FocusPic>
+<DIV id=main-slide class=content>
+<DIV class=changeDiv>
+{pc:content action="position" posid="1" order="id" num="10"cache="3600"}
+{loop $data $r}
+<a title="{str_cut($r['title'],80)}" href="{$r['url']}" target=_blank><img alt="{$r['title']}" src="{thumb($r['thumb'],340,250)}" width="340" height="250" /></a>
+{/loop}
+{/pc}
+ </DIV></DIV></DIV></DIV>
+<DIV class="newsbox left">
+<DIV class=title01>
+<DIV class=weather></DIV>
+<UL class=SwapTab01>
+  <LI class=fb><A href="{$CATEGORYS[21][url]}" 
+  target=_blank>{$CATEGORYS[21][catname]}</A> </LI>
+  </UL></DIV>
+<DIV class=tab-content01>
+<UL>
+{pc:content action="lists" catid="21" order="id" num="1" cache="3600"}
+{loop $data $r}
+  <H1><A title="{$r[title]}" href="{$r[url]}" target=_blank>{str_cut($r[title],50)}</A></H1>
+  {/loop}
+{/pc}
+  {pc:content action="lists" catid="21" order="id" num="8" start="1" cache="3600"}
+{loop $data $r}
+  <LI><SPAN class=time>{date("m-d",$r[inputtime])}</SPAN><A title={$r[title]} href="{$r[url]}" target=_blank>{str_cut($r[title],80)}</A></LI>
+   {/loop}
+{/pc}
+ </UL>
+<UL class=hidden>
+  {pc:content action="lists" catid="22" order="id" num="1" cache="3600"}
+{loop $data $r}
+  <H1><A title="{$r[title]}" 
+  href="{$r[url]}" 
+  target=_blank>{str_cut($r[title],50)}</A></H1>
+  {/loop}
+{/pc}
+  {pc:content action="lists" catid="22" order="id" num="8" start="1" cache="3600"}
+{loop $data $r}
+  <LI><SPAN class=time>{date("m-d",$r[inputtime])}</SPAN><A title={$r[title]} href="{$r[url]}" target=_blank>{str_cut($r[title],80)}</A></LI>
+   {/loop}
+{/pc}
+  </UL></DIV></DIV>
+<DIV class="sidebar right">
+<DIV class=box>
+<DIV class=title02>
+<UL class=SwapTab00><!--   聚焦隆林 大山回音-->
+  <LI class=fb><A href="{$CATEGORYS[22][url]}" 
+  target=_blank>{$CATEGORYS[22][catname]}</A> </LI>
+  <LI><A href="{$CATEGORYS[24][url]}" 
+  target=_blank>{$CATEGORYS[24][catname]}</A> </LI></UL></DIV>
+<DIV class="tab-content00 sidvod">
+<UL>
+{pc:content action="lists" catid="22" order="id" num="4" cache="3600"}
+{loop $data $r}
+  <LI><A title={$r[title]} href="{$r[url]}" target=_blank><IMG title={$r[title]} src="{thumb($r[thumb],90,68)} "></A> 
+  <DIV><A title={$r[title]} href="{$r[url]}" target=_blank>{str_cut($r[title],25)}</A></DIV></LI>
+  {/loop}
+{/pc}  
+  </UL>
+<UL class=hidden>
+  <DIV class=music>
+{pc:content action="lists" catid="24" order="id" num="10" cache="3600"}
+{loop $data $r}
+  <DIV><A title={$r[title]} href="{$r[url]}" target=_blank>{str_cut($r[title],50)}</A></DIV>
+   {/loop}
+{/pc} 
+  </DIV></UL></DIV></DIV></DIV></DIV>
+<DIV class="contentbox bot">
+<DIV class="ads734X80 left bot">
+<SCRIPT language=javascript src="http://localhost/gxll/statics/js/3.js"></SCRIPT>
+</DIV>
+<DIV class="sidebar right"><!--通知公告-->
+<DIV class="box bot">
+<DIV class=title02><SPAN class=more><A 
+href="{$CATEGORYS[136][url]}" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=fb>{$CATEGORYS[136][catname]}</DIV></DIV>
+<DIV style="OVERFLOW: hidden" class=sidlis>
+<UL id=ticker>
+{pc:content action="lists" catid="136" order="id" num=""cache="3600"}
+{loop $data $r}
+  <LI><A title={$r[title] href="{$r[url]}" target=_blank>{str_cut($r[title],60)}</A> </LI>
+  {/loop}
+{/pc}
+  </UL>
+  <SCRIPT type=text/javascript>
+	  $(function() {
+		var ticker = $("#ticker");
+		ticker.children().filter("li").each(function() {
+		  var dt = $(this),
+		    container = $("<div>");
+		  dt.next().appendTo(container);
+		  dt.prependTo(container);
+		  container.appendTo(ticker);
+		});
+		ticker.css("overflow", "hidden");
+		function animator(currentItem) {
+		  var distance = currentItem.height();
+			duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.015;
+		  currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+			currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+			animator(currentItem.parent().children(":first"));
+		  }); 
+		};		
+		animator(ticker.children(":first"));
+		ticker.mouseenter(function() {
+		  ticker.children().stop();		  
+		});
+		ticker.mouseleave(function() {	
+		  animator(ticker.children(":first"));		  
+		});
+	  });
+    </SCRIPT>
+</DIV></DIV><!--社会与法制-->
+<DIV class=box>
+<DIV class=title02><SPAN class=more><A 
+href="{$CATEGORYS[137][url]}" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=fb>{$CATEGORYS[137][catname]}</DIV></DIV>
+<DIV class=sidlis>
+<UL>
+{pc:content action="lists" catid="137" order="id" num="8" cache="3600"}
+{loop $data $r}
+  <LI><A title="{$r[title]}" 
+  href="{$r[url]}" 
+  target=_blank>{str_cut($r[title],45)}</A> </LI>
+  {/loop}
+{/pc}
+ </UL></DIV></DIV></DIV>
+<DIV class="main01 left MR10">
+<DIV class=title03><SPAN class=more><A 
+href="{$CATEGORYS[25][url]}" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=tit><!--领导动态-->{$CATEGORYS[25][catname]}</DIV></DIV>
+<UL>
+{pc:content action="lists" catid="25" order="id" num="8" cache="3600"}
+{loop $data $r}
+  <LI><SPAN class=time>{date("m-d",$r[inputtime])}</SPAN><A title={$r[title]} 
+  href="{$r[url]}" 
+  target=_blank>{str_cut($r[title],45)}</A> 
+  </LI>
+  {/loop}
+{/pc}
+  </UL></DIV>
+<DIV class="main01 left MR10">
+<DIV class=title03><SPAN class=more><A 
+href="{$CATEGORYS[141][url]}" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=tit><!--乡镇传真-->{$CATEGORYS[141][catname]}</DIV></DIV>
+<UL>
+{pc:content action="lists" catid="141" order="id" num="8" cache="3600"}
+{loop $data $r}
+  <LI><SPAN class=time>{date("m-d",$r[inputtime])}</SPAN><A title={$r[title]} 
+  href="{$r[url]}" 
+  target=_blank>{str_cut($r[title],45)}</A> 
+  </LI>
+  {/loop}
+{/pc}
+  </UL></DIV>
+<DIV class="main01 left bot">
+<DIV class=title03><SPAN class=more><A 
+href="{$CATEGORYS[140][url]}" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=tit><!--部门工作-->{$CATEGORYS[140][catname]}</DIV></DIV>
+<UL>
+{pc:content action="lists" catid="140" order="id" num="8" cache="3600"}
+{loop $data $r}
+  <LI><SPAN class=time>{date("m-d",$r[inputtime])}</SPAN><A title="{$r[title]}" href="{$r[url]}" 
+  target=_blank>{str_cut($r[title],45)}</A></LI>
+   {/loop}
+{/pc} 
+  </UL></DIV>
+<DIV class="main01picbox left">
+<DIV class=main01pictit><A title="点击查看更多图说新闻>>" 
+href="{$CATEGORYS[14][url]}" target=_blank><IMG 
+src="{IMG_PATH}gxll/gxll_tit04.gif"></A></DIV>
+<DIV class="main01pic left">
+<UL>
+ {pc:content action="lists" catid="14" num="4" order="id DESC" cache="3600"}
+ {loop $data $r}
+ <LI><A title="{$r[title]}" href="{$r[url]}" target=_blank><IMG title="{$r[title]}" src="{thumb($r[thumb],154,116)}"></A> 
+  <DIV class=ptb><A title="{$r[title]}" href="{$r[url]}" target=_blank>{str_cut($r[title],30)}</A></DIV></LI>
+  {/loop}
+  {/pc}
+  </UL></DIV></DIV></DIV>
+<DIV style="WIDTH: 960px; HEIGHT: 80px" class="ads960 bot">
+<DIV style="WIDTH: 475px; FLOAT: left">
+<!--广告调用-->
+<SCRIPT language=javascript src="http://localhost/gxll/statics/js/11.js"></SCRIPT>
+</DIV>
+<DIV style="WIDTH: 475px; FLOAT: right">
+<SCRIPT language=javascript src="http://localhost/gxll/statics/js/12.js"></SCRIPT>
+</DIV></DIV>
+<!--广告调用结束-->
+
+{template "content","footer"}

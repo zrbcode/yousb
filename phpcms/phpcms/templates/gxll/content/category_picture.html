@@ -1,0 +1,69 @@
+{template "content","header2"}
+<!--main-->
+<div class="container">
+  <div class="P10"></div>
+    <div class="contentbox">	  
+      <div class="main left">
+      {pc:content action="category" catid="$catid" num="10" siteid="$siteid" order="listorder ASC"}
+     {loop $data $k $v}
+  <div class="photo_box">
+  <div class="main_tit"> 
+  	<div class="txt left"><a href="{$v[url]}">{$v[catname]}</a></div>
+    <span class="more"><a href="{$v[url]}">更多>></a> </span> 
+     </div>
+    <div class="photo_pic">
+      <ul>
+         {pc:content action="lists" catid="$k" order="id" num="8" cache="3600"}
+         {loop $data $r}
+          <li><a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],158,120)} " title=""/>{$str_cut($r[title],40)}</a></li>
+        {/loop}
+        {/pc}        
+        </ul>
+		
+      <div class="P10"></div> </div></div>     
+   <div class="P10"></div>
+   {/loop}
+	{/pc}
+ </div>
+  <div class="sidebar right">
+        <div class="box bot">
+          <div class="sidebar_tit">{$catname}</div>
+          <div class="Btop sidenav">
+          	<ul>
+            {pc:content action="category" catid="$catid" num="15" siteid="$siteid" order="listorder ASC"}
+            {loop $data $r}
+              <LI><A href="{$r[url]}">{$r[catname]}</A> </LI>
+            {/loop}
+            {/pc}
+			</ul>
+          </div>
+        </div>
+        <div class="box">
+          <div class="sidebar_tit">专题栏目</div>
+          <div class="Btop sidesp">
+          	<ul>
+            {pc:content action="category" catid="15" siteid="$siteid" num="4" order="listorder ASC"}
+            {loop $data $r} 
+	        <LI><a title="$r[title]" href="{$r[url]}" target=_blank><IMG src={thumb($r[image],194,60)} width="190" height="56"></a></LI>
+	        {/loop}
+	        {/pc}
+          </ul>
+          </div>
+</div>  
+  <div class="box">
+          <div class="sidebar_tit">热门阅读</div>
+          <div class="Btop sidelis">
+          <ul>
+			{pc:content  action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+            {loop $data $r}
+              <LI><A href="{$r[url]}" target=_blank title="{$r[title]}">{str_cut($r[title], 28, '')}</A></LI>
+            {/loop}
+            {/pc}
+		 </ul>
+        </div>
+        </div>
+        </div>
+  </div>
+  <div class="P10 PT"></div>
+</div>
+{template "content","footer2"}

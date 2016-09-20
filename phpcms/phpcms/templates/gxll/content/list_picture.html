@@ -1,0 +1,26 @@
+{template "content","header2"}
+<!--main-->
+<div class="container">
+	<div class="P10"></div>
+    <div style="height:24px; line-height:12px;">
+	<a href="{siteurl($siteid)}">首页</a><span> &gt; {catpos($catid)} </div>
+    <div class="photo_box">
+  <div class="main_tit">
+            <div class="txt left">{$catname}</div>
+            <span class="crumbs"><a href="{siteurl($siteid)}">首页</a>&gt; {catpos($catid)}列表</span>
+</div>
+    <div class="sp_pic">
+     {pc:content action="lists" catid="$catid" num="20" order="id DESC" page="$page"}
+		<ul>
+			{loop $data $r}
+			<li><a href="{$r[url]}"><img src="{thumb($r[thumb],166,126)}" width="166" height="126" alt="{$r[title]}"/></a></li>			
+		</ul>
+	{/loop}		
+	{/pc}
+      <div class="P10"></div>
+    </div>
+  </div>
+    
+<div class="P10 PT"></div>
+</div>
+{template "content","footer2"}

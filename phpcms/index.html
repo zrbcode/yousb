@@ -1,0 +1,471 @@
+﻿﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>PHPCMS演示站</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<meta name="keywords" content="PHPCMS演示站">
+<meta name="description" content="PHPCMS演示站">
+<LINK rel=stylesheet type=text/css href="http://localhost/phpcms/statics/css/gxll.css">
+<LINK rel=stylesheet type=text/css href="http://localhost/phpcms/statics/css/default.css">
+<SCRIPT type=text/javascript src="http://localhost/phpcms/statics/js/jquery.min.js"></SCRIPT>
+<script type="text/javascript" src="http://localhost/phpcms/statics/js/koala.min.1.5.js"></script>
+<script type="text/javascript" src="http://localhost/phpcms/statics/js/terminator2.2.min.js"></script>
+<SCRIPT type=text/javascript src="http://localhost/phpcms/statics/js/jquery.sgallery.js"></SCRIPT>
+<SCRIPT type=text/javascript src="http://localhost/phpcms/statics/js/search_common.js"></SCRIPT>
+<SCRIPT type=text/javascript src="http://localhost/phpcms/statics/js/jquery.SuperSlide.2.1.js"></SCRIPT>
+<META name=GENERATOR content="MSHTML 9.00.8112.16546"></HEAD>
+<BODY>
+<DIV class=header>
+<DIV class=header_top>
+<SPAN class=left><IMG src="http://localhost/phpcms/statics/images/gxll/gxll_top01.gif" width=22 height=30>
+<A href="#" target=_blank>县委</A></SPAN>
+<SPAN class=left><IMG src="http://localhost/phpcms/statics/images/gxll/gxll_top02.gif" width=22 height=30><A href="http://www.zjkcc.gov.cn/" target=_blank>县人大</A></SPAN>
+
+<SPAN class=left><IMG src="http://localhost/phpcms/statics/images/gxll/gxll_top02.gif" width=22 height=30><A href="http://www.ccx.gov.cn/" target=_blank>县政府</A></SPAN>
+<SPAN class=left><IMG src="http://localhost/phpcms/statics/images/gxll/gxll_top03.gif" width=22 height=30><A href="#" target=_blank>县政协</A></SPAN> 
+<SPAN class=right><A href="http://localhost/phpcms/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=137" target=_blank>联系我们</A> | <A href="#" target=_blank>站务公告</A>
+</SPAN></DIV>
+<DIV style="HEIGHT: 320px" class=banner><!--<EMBED height=220 
+type=application/x-shockwave-flash 
+pluginspage=http://www.macromedia.com/go/getflashplayer width=980 
+src=http://localhost/phpcms/statics/images/gxll/banner.swf quality="high">-->
+<!-- 代码 开始 -->
+<div id="fsD1" class="focus">  
+    <div id="D1pic1" class="fPic">  
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href=""><img src="http://localhost/phpcms/statics/images//a.jpg" style="opacity: 1; "></a>
+         
+        </div>
+        
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href=""><img src="http://localhost/phpcms/statics/images//b.jpg" style="opacity: 1; "></a>
+      
+        </div>
+        
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href=""><img src="http://localhost/phpcms/statics/images//c.jpg" style="opacity: 1; "></a>
+       
+        </div>
+        
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href=""><img src="http://localhost/phpcms/statics/images//d.jpg" style="opacity: 1; "></a>
+           
+        </div>    
+    </div>
+    <div class="fbg">  
+    <div class="D1fBt" id="D1fBt">  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>3</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>  
+    </div>  
+    </div>  
+   
+</div>  
+<script type="text/javascript">
+	Qfast.add('widgets', { path: "http://localhost/phpcms/statics/js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+	Qfast(false, 'widgets', function () {
+		K.tabs({
+			id: 'fsD1',   //焦点图包裹id  
+			conId: "D1pic1",  //** 大图域包裹id  
+			tabId:"D1fBt",  
+			tabTn:"a",
+			conCn: '.fcon', //** 大图域配置class       
+			auto: 1,   //自动播放 1或0
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+			pageBt:true,//是否有按钮切换页码
+			bns: ['.prev', '.next'],//** 前后按钮配置class                          
+			interval: 3000  //** 停顿时间  
+		}) 
+	})  
+</script>
+<!-- 代码 结束 -->
+
+</DIV>
+<DIV class=menu><SPAN class="Date right">
+<SCRIPT language=JavaScript>
+function CalConv()
+{
+FIRSTYEAR = 1998;
+LASTYEAR = 2031;
+
+today = new Date();
+SolarYear = today.getFullYear();
+SolarMonth = today.getMonth() + 1;
+SolarDate = today.getDate();
+Weekday = today.getDay();
+LunarCal = [
+  new tagLunarCal( 27,  5, 3, 43, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1 ),
+  new tagLunarCal( 46,  0, 4, 48, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1 ), /* 88 */
+  new tagLunarCal( 35,  0, 5, 53, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1 ), /* 89 */
+  new tagLunarCal( 23,  4, 0, 59, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 42,  0, 1,  4, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 31,  0, 2,  9, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0 ),
+  new tagLunarCal( 21,  2, 3, 14, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1 ), /* 93 */
+  new tagLunarCal( 39,  0, 5, 20, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 28,  7, 6, 25, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1 ),
+  new tagLunarCal( 48,  0, 0, 30, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1 ),
+  new tagLunarCal( 37,  0, 1, 35, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1 ), /* 97 */
+  new tagLunarCal( 25,  5, 3, 41, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 ),
+  new tagLunarCal( 44,  0, 4, 46, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 ),
+  new tagLunarCal( 33,  0, 5, 51, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 22,  4, 6, 56, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ), /* 101 */
+  new tagLunarCal( 40,  0, 1,  2, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ),
+  new tagLunarCal( 30,  9, 2,  7, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 49,  0, 3, 12, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 38,  0, 4, 17, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0 ), /* 105 */
+  new tagLunarCal( 27,  6, 6, 23, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1 ),
+  new tagLunarCal( 46,  0, 0, 28, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0 ),
+  new tagLunarCal( 35,  0, 1, 33, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0 ),
+  new tagLunarCal( 24,  4, 2, 38, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ), /* 109 */
+  new tagLunarCal( 42,  0, 4, 44, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 31,  0, 5, 49, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0 ),
+  new tagLunarCal( 21,  2, 6, 54, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ),
+  new tagLunarCal( 40,  0, 0, 59, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1 ), /* 113 */
+  new tagLunarCal( 28,  6, 2,  5, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0 ),
+  new tagLunarCal( 47,  0, 3, 10, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1 ),
+  new tagLunarCal( 36,  0, 4, 15, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1 ),
+  new tagLunarCal( 25,  5, 5, 20, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0 ), /* 117 */
+  new tagLunarCal( 43,  0, 0, 26, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 ),
+  new tagLunarCal( 32,  0, 1, 31, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0 ),
+  new tagLunarCal( 22,  3, 2, 36, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0 ) ];
+/* 民國年每月之日數 */
+SolarCal = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+/* 民國年每月之累積日數, 平年與閏年 */ 
+SolarDays = [  0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365, 396,  0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366, 397 ];
+AnimalIdx = ["马", "羊", "猴", "鸡", "狗", "猪", "鼠", "牛", "虎", "兔", "龙", "蛇" ];
+LocationIdx = [ "南", "东", "北", "西" ];
+if ( SolarYear <= FIRSTYEAR || SolarYear > LASTYEAR ) return 1;
+sm = SolarMonth - 1;
+if ( sm < 0 || sm > 11 ) return 2;
+leap = GetLeap( SolarYear );
+if ( sm == 1 )
+d = leap + 28;
+else
+d = SolarCal[sm];
+if ( SolarDate < 1 || SolarDate > d ) return 3;
+y = SolarYear - FIRSTYEAR;
+acc = SolarDays[ leap*14 + sm ] + SolarDate;
+kc = acc + LunarCal[y].BaseKanChih;
+Kan = kc % 10;
+Chih = kc % 12;
+Location = LocationIdx[kc % 4];
+Age = kc % 60;
+if ( Age < 22 )
+Age = 22 - Age;
+else
+Age = 82 - Age;
+Animal = AnimalIdx[ Chih ];
+if ( acc <= LunarCal[y].BaseDays ) {
+y--;
+LunarYear = SolarYear - 1;
+leap = GetLeap( LunarYear );
+sm += 12;
+acc = SolarDays[leap*14 + sm] + SolarDate;
+ }
+else
+LunarYear = SolarYear;
+l1 = LunarCal[y].BaseDays;
+for ( i=0; i<13; i++ ) {
+l2 = l1 + LunarCal[y].MonthDays[i] + 29;
+if ( acc <= l2 ) break;
+l1 = l2;
+ }
+LunarMonth = i + 1;
+LunarDate = acc - l1;
+im = LunarCal[y].Intercalation;
+if ( im != 0 && LunarMonth > im ) {
+LunarMonth--;
+if ( LunarMonth == im ) LunarMonth = -im;
+ }
+if ( LunarMonth > 12 ) LunarMonth -= 12;
+today=new Date();
+        function initArray(){
+                         this.length=initArray.arguments.length
+                         for(var i=0;i<this.length;i++)
+                         this[i+1]=initArray.arguments[i]  }
+       var d=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+     document.write("", today.getFullYear(),"年",today.getMonth()+1,"月",today.getDate(),"日 ",d[today.getDay()+1],"");
+     document.write( " 农历 " + LunarMonth + "月" + LunarDate + "日" );
+   //  document.write( "煞" + Location + " 沖" + Animal + Age + "岁</span>" );
+       return 0; 
+}
+/* 求此民國年是否為閏年, 返回 0 為平年, 1 為閏年 */
+function GetLeap( year )
+{
+   if ( year % 400 == 0 )
+     return 1;
+   else if ( year % 100 == 0 )
+     return 0;
+   else if ( year % 4 == 0 )
+     return 1;
+   else
+     return 0;
+}
+function tagLunarCal( d, i, w, k, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13) {
+this.BaseDays = d;         /* 到民國 1 月 1 日到農曆正月初一的累積日數 */
+this.Intercalation = i;    /* 閏月月份. 0==此年沒有閏月 */
+this.BaseWeekday = w;      /* 此年民國 1 月 1 日為星期幾再減 1 */
+this.BaseKanChih = k;      /* 此年民國 1 月 1 日之干支序號減 1 */
+this.MonthDays = [ m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13 ]; /* 此農曆年每月之大小, 0==小月(29日), 1==大月(30日) */
+}
+//-->
+
+CalConv();
+</SCRIPT>
+</SPAN>
+<UL class=nav-site>
+  <LI class=nav-ind><A href="http://localhost/phpcms" target=_blank>首 页</A> 
+</LI>
+
+    <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=9" target=_blank>走进椴木村<!--[if IE 7]> <!--></A><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <UL>
+  
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=134" 
+    target=_blank>椴木沟村概述</A> </LI>
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=133" 
+    target=_blank>椴木沟村旅游</A> </LI>
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=135" 
+    target=_blank>特产美食</A> </LI>
+    		</UL><!--[if lte IE 6]></td></tr></table></a><![endif]--></LI>
+	   <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=10" target=_blank>新闻中心<!--[if IE 7]> <!--></A><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <UL>
+  
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=21" 
+    target=_blank>椴木沟村新闻</A> </LI>
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=22" 
+    target=_blank>媒体关注</A> </LI>
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=25" 
+    target=_blank>扶贫政策</A> </LI>
+    		</UL><!--[if lte IE 6]></td></tr></table></a><![endif]--></LI>
+	   <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=136" target=_blank>政务公开<!--[if IE 7]> <!--></A><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <UL>
+  
+    		</UL><!--[if lte IE 6]></td></tr></table></a><![endif]--></LI>
+	   <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=14" target=_blank>图看椴木村<!--[if IE 7]> <!--></A><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <UL>
+  
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=138" 
+    target=_blank>椴木沟村美景</A> </LI>
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=140" 
+    target=_blank>活动摄影</A> </LI>
+        <LI><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=141" 
+    target=_blank>土特产摄影</A> </LI>
+    		</UL><!--[if lte IE 6]></td></tr></table></a><![endif]--></LI>
+	 	</UL></DIV>
+<DIV class=set>
+<DIV id=announ class=left>
+<UL>
+ </LI></UL></DIV>
+<SCRIPT type=text/javascript>
+$(function(){
+	startmarquee('announ',30,1,500,3000);
+})
+</SCRIPT>
+
+<DIV class="sobox right">
+<FORM method=get action=http://localhost/phpcms/index.php><INPUT name=m 
+value=search type=hidden> <INPUT name=c value=index type=hidden> <INPUT name=a 
+value=init type=hidden> <INPUT id=typeid name=typeid value=1 type=hidden> <INPUT 
+id=siteid name=siteid value=1 type=hidden> <INPUT id=q class="text left" name=q> 
+<INPUT class="button right" value="    " type=submit> </FORM></DIV></DIV></DIV>
+<!--main-->
+<DIV class=container>
+<DIV class="ads960 bot">
+<SCRIPT language=javascript src="http://localhost/phpcms/statics/js/statics/js/2.js"></SCRIPT>
+</DIV>
+<DIV class="contentbox bot">
+<DIV class="FocusPicBox left">
+<DIV class=FocusPic>
+<DIV id=main-slide class=content>
+<DIV class=changeDiv>
+<a title="前四个月河北房地产税收收入增势趋缓" href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=15" target=_blank><img alt="前四个月河北房地产税收收入增势趋缓" src="http://localhost/phpcms/statics/images/nopic.gif" width="340" height="250" /></a>
+<a title="河北大学工商学院：教育精准扶贫 全面助力脱贫" href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=21&id=144" target=_blank><img alt="河北大学工商学院：教育精准扶贫 全面助力脱贫" src="http://123.206.69.51/uploadfile/2016/0721/20160721111114662.jpg" width="340" height="250" /></a>
+ </DIV></DIV></DIV></DIV>
+<DIV class="newsbox left">
+<DIV class=title01>
+<DIV class=weather></DIV>
+<UL class=SwapTab01>
+  <LI class=fb><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=21" 
+  target=_blank>椴木沟村新闻</A> </LI>
+  </UL></DIV>
+<DIV class=tab-content01>
+<UL>
+  <H1><A title="河北大学工商学院：教育精准扶贫 全面助力脱贫" href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=21&id=144" target=_blank>河北大学工商学院：教育精准扶贫...</A></H1>
+      <LI><SPAN class=time>07-26</SPAN><A title=这是一条新闻 href="http://www.baidu.com" target=_blank>这是一条新闻</A></LI>
+    </UL>
+<UL class=hidden>
+    <H1><A title="河北要求防汛抗旱两手硬 夏收夏种夏管一起抓" 
+  href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=11" 
+  target=_blank>河北要求防汛抗旱两手硬 夏收夏...</A></H1>
+      <LI><SPAN class=time>05-20</SPAN><A title=2015年河北4项减排指标全部大幅超额完成标准 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=12" target=_blank>2015年河北4项减排指标全部大幅超额完成标准</A></LI>
+     <LI><SPAN class=time>05-20</SPAN><A title=“胖墩”学生日益增多 “私房菜”不要经常大鱼大肉 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=13" target=_blank>“胖墩”学生日益增多 “私房菜”不要经常大鱼大肉</A></LI>
+     <LI><SPAN class=time>05-20</SPAN><A title=河北将设立高校毕业生创业就业引导基金 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=14" target=_blank>河北将设立高校毕业生创业就业引导基金</A></LI>
+     <LI><SPAN class=time>05-20</SPAN><A title=前四个月河北房地产税收收入增势趋缓 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=15" target=_blank>前四个月河北房地产税收收入增势趋缓</A></LI>
+     </UL></DIV></DIV>
+<DIV class="sidebar right">
+<DIV class=box>
+<DIV class=title02>
+<UL class=SwapTab00><!--   聚焦隆林 大山回音-->
+  <LI class=fb><A href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=22" 
+  target=_blank>媒体关注</A> </LI>
+  <LI><A href="" 
+  target=_blank></A> </LI></UL></DIV>
+<DIV class="tab-content00 sidvod">
+<UL>
+  <LI><A title=河北要求防汛抗旱两手硬 夏收夏种夏管一起抓 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=11" target=_blank><IMG title=河北要求防汛抗旱两手硬 夏收夏种夏管一起抓 src="http://localhost/phpcms/statics/images/nopic.gif "></A> 
+  <DIV><A title=河北要求防汛抗旱两手硬 夏收夏种夏管一起抓 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=11" target=_blank>河北要求防汛...</A></DIV></LI>
+    <LI><A title=2015年河北4项减排指标全部大幅超额完成标准 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=12" target=_blank><IMG title=2015年河北4项减排指标全部大幅超额完成标准 src="http://localhost/phpcms/statics/images/nopic.gif "></A> 
+  <DIV><A title=2015年河北4项减排指标全部大幅超额完成标准 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=12" target=_blank>2015年河北4项...</A></DIV></LI>
+    <LI><A title=“胖墩”学生日益增多 “私房菜”不要经常大鱼大肉 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=13" target=_blank><IMG title=“胖墩”学生日益增多 “私房菜”不要经常大鱼大肉 src="http://localhost/phpcms/statics/images/nopic.gif "></A> 
+  <DIV><A title=“胖墩”学生日益增多 “私房菜”不要经常大鱼大肉 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=13" target=_blank>&ldquo;胖墩&rdquo;学生...</A></DIV></LI>
+    <LI><A title=河北将设立高校毕业生创业就业引导基金 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=14" target=_blank><IMG title=河北将设立高校毕业生创业就业引导基金 src="http://localhost/phpcms/statics/images/nopic.gif "></A> 
+  <DIV><A title=河北将设立高校毕业生创业就业引导基金 href="http://localhost/phpcms/index.php?m=content&c=index&a=show&catid=22&id=14" target=_blank>河北将设立高...</A></DIV></LI>
+    
+  </UL>
+<UL class=hidden>
+  <DIV class=music>
+ 
+  </DIV></UL></DIV></DIV></DIV></DIV>
+<DIV class="contentbox bot">
+<DIV class="ads734X80 left bot">
+<SCRIPT language=javascript src="http://localhost/gxll/statics/js/3.js"></SCRIPT>
+</DIV>
+<DIV class="sidebar right"><!--通知公告-->
+<DIV class="box bot">
+<DIV class=title02><SPAN class=more><A 
+href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=136" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=fb>政务公开</DIV></DIV>
+<DIV style="OVERFLOW: hidden" class=sidlis>
+<UL id=ticker>
+  </UL>
+  <SCRIPT type=text/javascript>
+	  $(function() {
+		var ticker = $("#ticker");
+		ticker.children().filter("li").each(function() {
+		  var dt = $(this),
+		    container = $("<div>");
+		  dt.next().appendTo(container);
+		  dt.prependTo(container);
+		  container.appendTo(ticker);
+		});
+		ticker.css("overflow", "hidden");
+		function animator(currentItem) {
+		  var distance = currentItem.height();
+			duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.015;
+		  currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+			currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+			animator(currentItem.parent().children(":first"));
+		  }); 
+		};		
+		animator(ticker.children(":first"));
+		ticker.mouseenter(function() {
+		  ticker.children().stop();		  
+		});
+		ticker.mouseleave(function() {	
+		  animator(ticker.children(":first"));		  
+		});
+	  });
+    </SCRIPT>
+</DIV></DIV><!--社会与法制-->
+<DIV class=box>
+<DIV class=title02><SPAN class=more><A 
+href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=137" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=fb>联系我们</DIV></DIV>
+<DIV class=sidlis>
+<UL>
+ </UL></DIV></DIV></DIV>
+<DIV class="main01 left MR10">
+<DIV class=title03><SPAN class=more><A 
+href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=25" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=tit><!--领导动态-->扶贫政策</DIV></DIV>
+<UL>
+  </UL></DIV>
+<DIV class="main01 left MR10">
+<DIV class=title03><SPAN class=more><A 
+href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=141" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=tit><!--乡镇传真-->土特产摄影</DIV></DIV>
+<UL>
+  </UL></DIV>
+<DIV class="main01 left bot">
+<DIV class=title03><SPAN class=more><A 
+href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=140" 
+target=_blank>更多&gt;&gt;</A></SPAN> 
+<DIV class=tit><!--部门工作-->活动摄影</DIV></DIV>
+<UL>
+ 
+  </UL></DIV>
+<DIV class="main01picbox left">
+<DIV class=main01pictit><A title="点击查看更多图说新闻>>" 
+href="http://localhost/phpcms/index.php?m=content&c=index&a=lists&catid=14" target=_blank><IMG 
+src="http://localhost/phpcms/statics/images/gxll/gxll_tit04.gif"></A></DIV>
+<DIV class="main01pic left">
+<UL>
+      </UL></DIV></DIV></DIV>
+<DIV style="WIDTH: 960px; HEIGHT: 80px" class="ads960 bot">
+<DIV style="WIDTH: 475px; FLOAT: left">
+<!--广告调用-->
+<SCRIPT language=javascript src="http://localhost/gxll/statics/js/11.js"></SCRIPT>
+</DIV>
+<DIV style="WIDTH: 475px; FLOAT: right">
+<SCRIPT language=javascript src="http://localhost/gxll/statics/js/12.js"></SCRIPT>
+</DIV></DIV>
+<!--广告调用结束-->
+
+﻿<!--<DIV class=link>
+<DIV id=link_text>
+<a href="http://localhost/phpcms/index.php?m=link&c=index&a=register&siteid=1" target=_blank title="申请链接">友情链接</a>
+<select name="FriendLink" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+        <option value="">---国家部委网站---</option>
+		        		      </select>
+      <select name="FriendLink" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+        <option value="">---省级政府网站---</option>   
+                		      </select>
+      <select name="FriendLink" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+        <option value="">---市级政府网站---</option>
+                		      </select>
+      <select name="FriendLink" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+        <option value="">---县区政府网站---</option>
+		        		      </select>
+      <select name="FriendLink" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+        <option value="">---新闻媒体网站---</option>
+                		      </select>
+      <select name="FriendLink" onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+        <option value="">---其它友情链接---</option>
+                		      </select>
+ </DIV></DIV></DIV>-->
+<DIV class=footer>
+<DIV class=copymain><A 
+style="MARGIN-TOP: 15px; PADDING-RIGHT: 30px; FLOAT: right" title=网上报警 
+href="http://www.gx.cyberpolice.cn/" target=_blank><IMG alt=网上报警 
+src="http://localhost/gxll/statics/images/gxll/bjgt.gif" width=36 
+height=42></A> 
+<BR>主管：椴木沟村
+QQ群：120220768<BR>ICP备09007576号&nbsp;百公网安备：4526010151&nbsp;技术支持：<A 
+title="河北大学软件创业中心" href="http://soft.hicc.cn/" 
+target=_blank>河北大学软件创业中心&河北大学工商学院科技协会</A> &nbsp;
+<SCRIPT type=text/javascript>
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd42650cb11b75aefd900d43a60803a26' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+</DIV></DIV>
+<SCRIPT type=text/javascript> 
+$(function(){
+	new slide("#main-slide","cur",340,255,1);//焦点图
+	new SwapTab(".SwapTab00","li",".tab-content00","ul","fb");//新闻TAB
+	new SwapTab(".SwapTab01","li",".tab-content01","ul","fb");//新闻TAB
+	new SwapTab(".SwapTab02","li",".tab-content02","ul","fb");//政务TAB
+	new SwapTab(".SwapTab03","li",".tab-content03","ul","fb");//政务TAB
+	new SwapTab(".SwapTab04","li",".tab-content04","ul","fb");//政务TAB
+	new SwapTab(".SwapTab05","li",".tab-content05","ul","fb");//政务TAB
+	new SwapTab(".SwapTab06","li",".tab-content06","div","fb");//政务TAB
+	new SwapTab(".SwapTab07","li",".tab-content07","ul","fb");//政务TAB
+})
+jQuery(".Ebookbox").slide({mainCell:".bd ul",autoPlay:true,effect:"fold"});
+</SCRIPT>
+</BODY></HTML>

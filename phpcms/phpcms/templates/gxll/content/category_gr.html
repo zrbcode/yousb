@@ -1,0 +1,117 @@
+﻿{template "content","header2"}
+<!--main-->
+<DIV class=container>
+<DIV class=P10></DIV>
+<DIV class=contentbox>
+<DIV class="main left">
+<DIV class=box>
+<DIV class=main_tit>
+<DIV class="txt left">{$catname}</DIV></DIV>
+<DIV class=category>
+<DIV class="FocusPicBox left">
+<DIV class=FocusPic>
+<DIV id=main-slide class=content>
+<DIV class=changeDiv>
+
+{pc:content action="position" posid="10" order="id" num="5" cache="3600"}
+{loop $data $r}
+<A title={$r[title]} href="{$r[url]}"><IMG alt={$r[title]} src="{thumb($r[thumb],320,240)} "></A> 
+{/loop}
+{/pc}
+</DIV></DIV></DIV></DIV>
+<DIV class="new right">
+{pc:content action="lists" catid="$catid" order="id" num="1" cache="3600"}
+{loop $data $r}
+<DIV class=tip>
+<H3><A href="{$r[url]}" target=_blank>{$r[title]}</A></H3>
+<P>{str_cut($r[description],160)}</P></DIV>
+{/loop}
+{/pc}
+
+<UL>
+{pc:content action="lists" catid="$catid" start="1" order="id" num="6" cache="3600"}
+{loop $data $r}
+  <LI><SPAN class=time>{date("m-d",$r[inputtime])}</SPAN><A title="{$r[title]}" 
+  href="{$r[url]}" 
+  target=_blank>{$r[title]}</A>
+     {/loop}
+{/pc}
+  </li></UL></DIV></DIV></DIV>
+  
+
+<DIV class=P10></DIV>
+<DIV class=col-left>
+
+	{php $j=1;}
+	{loop subcat($catid) $v}
+	{php if($v['type']!=0) continue;}
+        <div class="box cat-area" {if $j%2==1}style="margin-right:10px"{/if}>
+	
+	<DIV class=cat_title>
+        		<DIV class=txt>{$v[catname]}</DIV><SPAN CLASS=more><a href="{$v[url]}" class="more">更多&gt;&gt</a></SPAN></DIV>
+             <div class=catlis>
+			 <UL>
+             	{pc:content action="lists" catid="$v[catid]" num="5" order="id DESC"}
+					{loop $data $r}
+						<li><span class=time>{date("m-d",$r[inputtime])}</span><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+					{/loop}
+				{/pc}
+                </ul>
+            </div>
+        </div>
+        {if $j%2==0}<div class="bk10"></div>{/if}
+	{$j++}
+	{/loop}
+   
+
+
+<DIV class=bk10></DIV></DIV></DIV>
+<DIV class="sidebar right">
+<DIV class="box bot">
+
+<DIV class=sidebar_tit>{$catname}</DIV>
+<DIV class="Btop sidenav">
+<UL>
+{pc:content action="category" catid="$catid" num="15" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+  <LI><A href="{$r[url]}">{$r[catname]}</A> </LI>
+{/loop}
+{/pc}
+</UL></DIV></DIV>
+<DIV class=box>
+<DIV class=sidebar_tit>专题栏目</DIV>
+<DIV class="Btop sidesp">
+<UL>
+  <LI><A href="http://www.gxll.gov.cn/html/llzt/zt001/" target=_blank><IMG 
+  src="{IMG_PATH}gxll/gxll_104.gif" width=190 
+  height=54></A> 
+  <LI><A href="http://www.gxll.gov.cn/html/llzt/zt002/" target=_blank><IMG 
+  src="{IMG_PATH}gxll/gxll_107.gif" width=190 
+  height=54></A> 
+  <LI><A href="http://www.gxll.gov.cn/html/llzt/zt003/" target=_blank><IMG 
+  src="{IMG_PATH}gxll/gxll_109.gif" width=190 
+  height=54></A> 
+  <LI><A href="http://www.gxll.gov.cn/html/llzt/zt004/" target=_blank><IMG 
+  src="{IMG_PATH}gxll/gxll_122.gif" width=190 
+  height=54></A> </LI></UL></DIV></DIV>
+<DIV class=P10></DIV>
+<DIV class=box>
+<DIV class=sidebar_tit>热门阅读</DIV>
+<DIV class="Btop sidelis">
+<UL>
+{pc:content  action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+{loop $data $r}
+  <LI><A href="{$r[url]}" 
+  target=_blank title="{$r[title]}">{str_cut($r[title], 28, '')}</A> 
+  </LI>
+  {/loop}
+{/pc}
+</UL></DIV></DIV></DIV></DIV>
+<DIV class="P10 PT"></DIV></DIV>
+<SCRIPT type=text/javascript> 
+$(function(){
+	new slide("#main-slide","cur",320,240,1);//焦点图
+	new SwapTab(".SwapTab01","li",".tab-content01","ul","fb");//新闻TAB
+})
+</SCRIPT>
+{template "content","footer2"}

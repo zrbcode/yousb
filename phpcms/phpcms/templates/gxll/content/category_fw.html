@@ -1,0 +1,161 @@
+﻿{template "content","header2"}
+<!--main -->
+<div class="container">
+  <div class="P10"></div>
+  <div class="contentbox">
+    <div class="sidebar left">
+      <div class="box bot">
+        <div class="sidebar_tit">{$CATEGORYS[39][catname]}</div>
+        <div class="sidtool">
+          <ul>
+            <LI><A href="{$CATEGORYS[81][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_143.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[72][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_144.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[78][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_146.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[76][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_156.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[71][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_161.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[83][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_162.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[80][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_163.gif" width=60 
+  height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[40][url]}" target=_blank><IMG 
+  src="{IMG_PATH}gxll/gxll_167.gif" width=60 height=60></A> </LI>
+  <LI><A href="{$CATEGORYS[86][url]}" 
+  target=_blank><IMG src="{IMG_PATH}gxll/gxll_168.gif" width=60 
+  height=60></A> </LI>
+          </ul>
+        </div>
+      </div>
+      <div class="box bot">
+        <div class="sidebar_tit">{$CATEGORYS[41][catname]}</div>
+        <div class="Btop sidelis">
+          <ul>
+           {pc:content action="lists" catid="41" order="id" num="8" cache="3600"}
+           {loop $data $r}
+            <li><a href="{$r[url]}" target="_blank">{$str_cut($r[title],40)}</a></li>
+           {/loop}
+           {/pc}
+          </ul>
+        </div>
+      </div>
+      <div class="box">
+        <div class="sidebar_tit">{$CATEGORYS[42][catname]}</div>
+        <div class="Btop sidelis">
+          <ul>
+            {pc:content action="lists" catid="42" order="id" num="8" cache="3600"}
+           {loop $data $r}
+            <li><a href="{$r[url]}" target="_blank">{$str_cut($r[title],40)}</a></li>
+           {/loop}
+           {/pc}  
+           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="conmain left">
+      <div class="box bot">
+        <div class="main_tit">
+          <div class="txt left"><!--个人办事-->{$CATEGORYS[39][catname]}</div>
+          <span class="crumbs"><a target="_blank" href="{$CATEGORYS[40][url]}">更多&gt;&gt;</a></span> </div>
+        <div class="conmainbox">
+          <div class="conmainpic01"></div>
+          <div class="conmainlis">
+            <ul>
+           {pc:content action="category" catid="39" num="25" siteid="$siteid" order="listorder ASC"}
+           {loop $data $r}
+            <li><a target="_blank" href="{$r[url]}">{$r[catname]}</a></li>
+           {/loop}
+           {/pc}
+          </ul>
+          </div>
+        </div>
+      </div>
+	  
+      <div class="bot conmainad"><img src="{IMG_PATH}gxll/gxll_174.gif" width="498" height="80" /></div>
+
+      <div class="box bot">
+        <div class="main_tit">
+          <div class="txt left"><!--企业办事-->{$CATEGORYS[40][catname]}</div>
+          <span class="crumbs"><a target="_blank" href="{$CATEGORYS[39][url]}">更多&gt;&gt;</a></span> </div>
+        <div class="conmainbox">
+          <div class="conmainpic02"></div>
+          <div class="conmainlis">
+            <ul>
+             {pc:content action="category" catid="40" num="25" siteid="$siteid" order="listorder ASC"}
+           {loop $data $r}
+            <li><a target="_blank" href="{$r[url]}">{$r[catname]}</a></li>
+           {/loop}
+           {/pc}
+           </ul>
+          </div>
+        </div>
+      </div>
+	 <div class="box" style="height:246px;">
+        <div class="main_tit">		
+		 <div class="txt left"><!--生活指南-->{$CATEGORYS[44][catname]}</div> 
+          <span class="crumbs"><a target="_blank" href="{$CATEGORYS[44][url]}">更多&gt;&gt;</a></span> </div>
+         <div class="govlis">
+          <ul>
+            {pc:content action="lists" catid="44" order="id" num="7" cache="3600"}
+           {loop $data $r}
+            <li><a href="{$r[url]}" target="_blank">{$str_cut($r[title],120)}</a></li>
+           {/loop}
+           {/pc}
+          </ul>
+		  </div>
+          <div class="P10"></div>
+       </div>
+    </div>
+	<div class="sidebar right">
+      <div class="box bot">
+        <div class="sidebar_tit">{$CATEGORYS[12][catname]}</div>
+        <div class="Btop sidenav">
+          <ul>
+           {pc:content action="category" catid="12" num="25" siteid="$siteid" order="listorder ASC"}
+           {loop $data $r}
+            <li><a target="_blank" href="{$r[url]}">{$r[catname]}</a></li>
+           {/loop}
+           {/pc}
+         </ul>
+        </div>
+      </div>
+      <div class="box">
+          <div class="sidebar_tit">专题栏目</div>
+          <div class="Btop sidesp">
+          	<ul>
+            {pc:content action="category" catid="15" siteid="$siteid" num="4" order="listorder ASC"}
+            {loop $data $r} 
+	         <LI><a title="$r[title]" href="{$r[url]}" target=_blank><IMG src={thumb($r[image],194,60)} width="190" height="56"></a></LI>
+	         {/loop}
+	        {/pc}
+          </ul>
+          </div>
+</div>      
+<div class="P10"></div>
+      <div class="box" style="height:140px;">
+        <div class="sidebar_tit"><!--公众参与-->{$CATEGORYS[43][catname]}</div>
+        <div class="Btop sidelis">
+          <ul>
+           {pc:content action="lists" catid="43" order="id" num="3" cache="3600"}
+           {loop $data $r}
+            <li><a href="{$r[url]}" target="_blank">{$str_cut($r[title],40)}</a></li>
+           {/loop}
+           {/pc}
+         </ul>
+        </div>
+      </div>
+    </div>
+  
+  <div class="P10 PT"></div>
+</div>
+{template "content","footer2"}
