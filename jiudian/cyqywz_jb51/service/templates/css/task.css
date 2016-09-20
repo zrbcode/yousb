@@ -1,0 +1,74 @@
+/*=========客服工单查询=========*/
+
+.table{ 
+border:1px #def solid;
+}
+
+div.backform{ 
+margin-top:10px;
+}
+
+.biaoti{ 
+background-color: #f7fbfe; 
+border-bottom:1px #def solid;
+}
+
+td.hang{
+border-bottom:1px #ebf7fc solid;
+}
+
+
+a.looktask{ 
+width:40px;
+height:19px;
+line-height:19px;
+cursor:pointer;
+background:url(../images/an.gif) left no-repeat;
+text-decoration: none;
+display:block;
+text-align:center;
+}
+
+div.taskintro{ 
+border:1px #deeffa solid;
+padding:15px;
+margin:5px 0px;
+font: 12px/25px Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+.stat0{background:#ff0000;padding:1px 3px;color:#fff}
+.stat1{background:#FF6600;padding:1px 3px;color:#fff}
+.stat2{background:#0099cc;padding:1px 3px;color:#fff}
+.stat3{background:#003399;padding:1px 3px;color:#fff}
+.stat4{background:#75522b;padding:1px 3px;color:#fff}
+.stat5{background:#339966;padding:1px 3px;color:#fff}
+.stat6{background:#666666;padding:1px 3px;color:#fff}
+
+
+
+div.chatzone{
+margin:10px 0px;
+height:250px;
+overflow:auto;
+border:1px #deeffa solid;
+}
+
+div.chatlist{
+padding:5px 20px 15px 20px;
+background:#ffffff;
+border-bottom:1px #deeffa dotted;
+margin:10px 0px;
+}
+
+div.chatlist div{
+font: 12px/18px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.chattime{
+margin-bottom:5px;
+color:#999;
+}
+
+

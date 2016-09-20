@@ -1,0 +1,83 @@
+<!-start->
+<link href="css/form.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/fm.js"></script>
+<div class="formgroup">{#groupname#}</div>
+<div  id="notice" class="noticediv"></div>
+<form id="myform" method="post" action="" name="myform">
+<div class="formintro">{#formintro#}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="3" >
+<!-start->
+
+<!-input->
+<tr> 
+      <td width="80" align="right">{#title#}：</td>
+      <td> 
+        <input type="text" name="{#fieldname#}" value="{#fieldvalue#}" class="input" style="width:{#size#}px" />
+        {#mustfill#} <div style="padding-top:3px;color:#666">{#intro#}</div>  </td>
+    </tr>
+<!-input->
+
+<!-textarea->
+    <tr> 
+      <td width="80" align="right">{#title#}：</td>
+      <td> 
+        <textarea name="{#fieldname#}"  rows="10" class="textarea" style="width:{#size#}px" >{#fieldvalue#}</textarea>
+        {#mustfill#} 
+        <div style="padding-top:3px;color:#666">{#intro#}</div>  </td>
+    </tr>
+
+<!-textarea->
+
+<!-list->
+    <tr> 
+      <td width="80" align="right">{#title#}：</td>
+      <td> 
+        <select name="{#fieldname#}" >
+		{#list#}
+        </select>
+        {#mustfill#} <div style="padding-top:3px;color:#666">{#intro#}</div> </td>
+    </tr>
+
+<!-list->
+
+<!-end->
+    <tr>
+      <td width="80" align="right">验 证 码：</td>
+      <td><div style="height:28px;white-space:nowrap;float:left;margin-right:1px">
+<input type="text" name="ImgCode" style="width:39px"  class="input" />
+</div>
+<div style="height:28px;white-space:nowrap;float:left">
+<img id="codeimg" src="{#RP#}codeimg.php" width="60" height="20" style="border:1px #dddddd solid">
+</div>
+<span id="getImgCode" style="cursor:pointer;margin-left:10px;line-height:20px">看不清？更换一张</span>
+</td>
+    </tr>
+	<tr> 
+      <td width="80" align="right"></td>
+      <td>
+<div  style="float:left;line-height:30px;margin-right:10px">
+<input id="nomember"  name="nomember" type="checkbox" value="1" {#anostr#} /> 匿名提交&nbsp; 
+</div>
+<div id="notLogin" style="display:none;float:left;line-height:33px">
+您尚未登录 <span class="loginlink">登录</span> | <a href="{#RP#}member/reg.php" class="nomal">注册</a>
+
+
+</div>
+<div id="isLogin" style="display:none;float:left;line-height:33px">
+您已登录,登录账号: <span id="username"></span> &nbsp; | &nbsp;<a href="{#RP#}member/" class="nomal">会员中心</a> | &nbsp;<span class="logoutlink">退出</span>
+</div>
+	  </td>
+    </tr>
+    <tr> 
+      <td width="80" align="right">&nbsp;</td>
+      <td height="30">
+        <input type="submit" name="Submit" value="提交" class="submit">
+        <input type='hidden' name='act' value='formsend'>
+        <input name='groupid' type='hidden' id="groupid" value='{#groupid#}'>
+		
+	  </td>
+    </tr>
+  </table>
+</form>
+
+<!-end->

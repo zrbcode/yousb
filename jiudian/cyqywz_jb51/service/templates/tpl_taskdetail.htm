@@ -1,0 +1,48 @@
+<!-start->
+<link href="css/task.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/taskdetail.js"></script>
+<table width="100%"  border="0" cellpadding="6" cellspacing="1" bgcolor="#DEEFFA">
+  <tr>
+    <td width="80" align="right" bgcolor="#F2F9FD">工单编号：</td>
+    <td bgcolor="#FFFFFF">{#id#}</td>
+  </tr>
+  <tr>
+    <td width="80" align="right" bgcolor="#F2F9FD">提交时间：</td>
+    <td bgcolor="#FFFFFF">{#time#}</td>
+  </tr>
+  <tr>
+    <td width="80" align="right" bgcolor="#F2F9FD">末次回复：</td>
+    <td bgcolor="#FFFFFF">{#uptime#}</td>
+  </tr>
+  
+
+<!-start->  
+<!-list->
+<tr>
+    <td width="80" align="right" bgcolor="#F2F9FD">{#fieldcaption#}：</td>
+    <td bgcolor="#FFFFFF">{#fieldname#}</td>
+  </tr>
+<!-list->
+<!-end-> 
+</table>
+<div id="chatzone" class="chatzone">
+</div>
+<div class="backform" style="{#showbackform#}">
+<div  id="notice" class="noticediv"></div>
+  <form id="backForm" name="backForm" method="post" action="">
+  <table width="100%"  border="0" cellpadding="6" cellspacing="1" bgcolor="#DEEFFA">
+  <tr>
+    <td width="80" align="right" bgcolor="#F2F9FD">回复内容：</td>
+    <td bgcolor="#FFFFFF">
+	<textarea name="message"   rows="8"  class="textarea" id="message"  style="width:500px"></textarea>
+	<input name="act" type="hidden" id="act" value="backsend">
+	<input id="qusid" name="id" type="hidden" value="{#id#}">
+	<input id="stat" name="stat" type="hidden" value="{#stat#}">
+	<br>
+	<input name="cc" type="submit" id="cc" value="提交回复" class="button" style="margin-top:3px"></td>
+  </tr>
+  </table>
+  </form>
+</div>
+<!-end->
+

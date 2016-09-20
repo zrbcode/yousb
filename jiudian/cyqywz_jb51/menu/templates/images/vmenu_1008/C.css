@@ -1,0 +1,29 @@
+#vmenu{
+   margin:0;
+   padding:0;
+}
+
+
+#vmenu a:link,#vmenu a:visited,#vmenu a:active{
+   display:block;
+   width:210px;
+   height:34px;
+   color: #fff; 
+   text-decoration: none;
+   font:bold 14px/33px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+   background:url(vmenu.gif) 0px 0px no-repeat;
+   text-align:center;
+}
+
+
+#vmenu a:hover{
+   display:block;
+   width:210px;
+   height:34px;
+   color: #fff; 
+   text-decoration: none;
+   font:bold 14px/33px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+   background:url(vmenu.gif) 0px -34px no-repeat;
+   text-align:center;
+} 
+

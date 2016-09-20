@@ -1,0 +1,29 @@
+#vmenu{
+   margin:0;
+   padding:0;
+   background:#666;
+}
+
+
+#vmenu a:link,#vmenu a:visited,#vmenu a:active{
+   display:block;
+   height:30px;
+   color: #ffffff; 
+   border-bottom:1px #666 solid;
+   background:#4d4d4d;
+   text-decoration: none;
+   font:14px/30px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+   text-align:center;
+}
+
+
+#vmenu a:hover{
+   display:block;
+   height:30px;
+    border-bottom:1px #666 solid;
+   color: #fff; 
+   background:#333333;
+   text-decoration: none;
+   font:14px/30px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+   text-align:center;
+} 
