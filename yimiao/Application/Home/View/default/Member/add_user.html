@@ -1,0 +1,58 @@
+<include file="Public:header"/>
+  <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Index/index')}">首页</a><span class="crumb-step">&gt;</span>信息操作<span class="crumb-step">&gt;</span>
+            <span>新增成员</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('do_add')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody><tr>
+                            <th width="120"><i class="require-red">*</i>姓名：</th>
+                            <td>
+                               <input class="common-text required" id="title" name="name" size="50" value="" type="text" required="required">
+                            </td>
+                        </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>身份证号：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="idcard" size="50" value="" type="text" required="required">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>性别：</th>
+                                <td>
+									<select name="sex" id="catid" class="required" required="required">
+										<option value="">请选择</option>
+										<option value="男">男</option>
+										<option value="女">女</option>
+									</select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>电话：</th>
+                                <td><input name="phone" id="" type="text" size="50" required="required"></td>
+                            </tr>
+                            <tr>
+                                <th>家庭住址：</th>
+                                <td><textarea name="address" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10" required="required"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

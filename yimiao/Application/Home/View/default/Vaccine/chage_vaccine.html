@@ -1,0 +1,69 @@
+<include file="Public:header"/>
+  <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Index/index')}">首页</a><span class="crumb-step">&gt;</span>信息操作<span class="crumb-step">&gt;</span>
+            <span>修改疫苗信息</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('do_chage')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody><tr>
+                            <th width="120"><i class="require-red">*</i>疫苗名称：</th>
+                            <td>
+								<input type="hidden" name="v_id" value="{$data.v_id}">
+                               <input class="common-text required" id="title" name="type_name" size="50" value="{$data.type_name}" type="text" required="required">
+                            </td>
+                        </tr>
+                            
+                            <tr>
+                                <th>厂商：</th>
+                                <td>
+									<select name="firm" id="catid" class="required" required="required">
+										<volist name="firm" id="vo">
+										<if condition="$vo.firm_name eq $data.firm">
+										<option value="{$vo.firm_name}" select="selected">{$vo.firm_name}</option>
+										<else/>
+										<option value="{$vo.firm_name}" >{$vo.firm_name}</option>
+										</if>
+										</volist>
+									</select>
+                                </td>
+                            </tr>
+                             <tr>
+                                <th>种类：</th>
+                                <td>
+									<select name="type" id="catid" class="required" required="required">
+										<volist name="type" id="type">
+										<if condition="$type.vaccine eq $data.type">
+										<option value="{$type.vaccine}#{$type.code}" select="selected">{$type.vaccine}</option>
+										<else/>
+										<option value="{$type.vaccine}#{$type.code}" >{$type.vaccine}</option>
+										</if>
+										</volist>
+									</select>
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <th>注射次数：</th>
+                                <td><input name="sum" id="" type="text" size="50" required="required" value="{$data.sum}"></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

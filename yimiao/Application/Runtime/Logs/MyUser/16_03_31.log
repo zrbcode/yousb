@@ -1,0 +1,67 @@
+[ 2016-03-31T13:23:00+08:00 ] ::1 /yimiao/index.php/MyUser/%7B:U('Login/Login')%7D.html
+ERR: 无法加载控制器:{:U('Login
+
+[ 2016-03-31T13:24:04+08:00 ] ::1 /yimiao/index.php/MyUser/%7B:U('Login/Login')%7D.html
+ERR: 无法加载控制器:{:U('Login
+
+[ 2016-03-31T13:26:57+08:00 ] ::1 /yimiao/index.php/MyUser/Login/Login.html
+ERR: 模板不存在:./Application/MyUser/View/Login/Login.html
+
+[ 2016-03-31T13:29:48+08:00 ] ::1 /yimiao/index.php/MyUser/Login/Login.html
+ERR: 模板不存在:./Application/MyUser/View/Login/Login.html
+
+[ 2016-03-31T13:30:44+08:00 ] ::1 /yimiao/index.php/MyUser/Login/css/bootstrap.min.css
+ERR: 非法操作:css
+
+[ 2016-03-31T13:30:44+08:00 ] ::1 /yimiao/index.php/MyUser/Login/css/style.css
+ERR: 非法操作:css
+
+[ 2016-03-31T13:30:44+08:00 ] ::1 /yimiao/index.php/MyUser/Login/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2016-03-31T17:10:10+08:00 ] ::1 /yimiao/index.php/MyUser/Login/DoLogin.html
+ERR: 非法操作:DoLogin
+
+[ 2016-03-31T17:17:32+08:00 ] ::1 /yimiao/index.php/MyUser/Login/Index/index.html
+ERR: 非法操作:Index
+
+[ 2016-03-31T19:28:54+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 非法数据对象！
+
+[ 2016-03-31T19:29:52+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 非法数据对象！
+
+[ 2016-03-31T19:30:05+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 非法数据对象！
+
+[ 2016-03-31T19:42:18+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 非法数据对象！
+
+[ 2016-03-31T19:45:57+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: Think\Model:creata方法不存在！
+
+[ 2016-03-31T20:34:05+08:00 ] ::1 /yimiao/index.php/MyUser/Index/%EF%BC%83
+ERR: 非法操作:＃
+
+[ 2016-03-31T22:49:15+08:00 ] ::1 /yimiao/index.php/MyUser/Index/uppass.html
+ERR: 1146:Table 'db_ym.tb_' doesn't exist
+ [ SQL语句 ] : UPDATE `tb_` SET `password`='202cb962ac59075b964b07152d234b70' WHERE `id` = '1'
+
+[ 2016-03-31T22:57:56+08:00 ] ::1 /yimiao/index.php/MyUser/Login/Loginout.html
+ERR: 非法操作:Loginout
+
+[ 2016-03-31T23:03:45+08:00 ] ::1 /yimiao/index.php/MyUser/Index/del.htmlArray
+ERR: 非法操作:del.htmlArray
+
+[ 2016-03-31T23:14:16+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 1048:Column 'type' cannot be null
+ [ SQL语句 ] : INSERT INTO `tb_user` (`name`,`password`,`type`) VALUES ('test3','202cb962ac59075b964b07152d234b70',NULL)
+
+[ 2016-03-31T23:16:39+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 1048:Column 'type' cannot be null
+ [ SQL语句 ] : INSERT INTO `tb_user` (`name`,`password`,`type`) VALUES ('test3','202cb962ac59075b964b07152d234b70',NULL)
+
+[ 2016-03-31T23:16:56+08:00 ] ::1 /yimiao/index.php/MyUser/Index/new_user.html
+ERR: 1048:Column 'type' cannot be null
+ [ SQL语句 ] : INSERT INTO `tb_user` (`name`,`password`,`type`) VALUES ('test3','202cb962ac59075b964b07152d234b70',NULL)
+

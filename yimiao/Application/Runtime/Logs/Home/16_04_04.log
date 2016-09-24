@@ -1,0 +1,69 @@
+[ 2016-04-04T10:39:08+08:00 ] ::1 /yimiao/index.php/Home/Inoculation/GetList.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `tb_vaccine` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tb_vaccine` WHERE `type` = '狂犬疫苗'  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-04-04T10:39:10+08:00 ] ::1 /yimiao/index.php/Home/Inoculation/GetList.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `tb_vaccine` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tb_vaccine` WHERE `type` = '狂犬疫苗' AND `firm` = '辽宁疫苗'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000187s ]
+
+[ 2016-04-04T10:39:11+08:00 ] ::1 /yimiao/index.php/Home/Inoculation/Get_Vaccine_Info.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+SQL: SHOW COLUMNS FROM `tb_vaccine` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tb_vaccine` WHERE `v_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-04-04T10:39:22+08:00 ] ::1 /yimiao/index.php/Home/Inoculation/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `tb_vlist` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tb_vlist` WHERE `h_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tb_vaccine` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tb_vaccine` WHERE `v_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `tb_vlist` SET `count`='2',`plan`='2016-04-04#2016-04-04#2016-04-11#2016-05-02' WHERE `h_id` = 1 [ RunTime:0.0660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-04-04T10:39:27+08:00 ] ::1 /yimiao/index.php/Home/Inoculation/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `tb_vlist` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `tb_vlist` WHERE `h_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tb_vaccine` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tb_vaccine` WHERE `v_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `tb_vlist` SET `count`='3',`plan`='2016-04-04#2016-04-04#2016-04-04#2016-04-25' WHERE `h_id` = 1 [ RunTime:0.0682s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-04-04T10:39:31+08:00 ] ::1 /yimiao/index.php/Home/Inoculation/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `tb_vlist` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tb_vlist` WHERE `h_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tb_vaccine` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tb_vaccine` WHERE `v_id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `tb_vlist` SET `count`='4',`plan`='2016-04-04#2016-04-04#2016-04-04#2016-04-04' WHERE `h_id` = 1 [ RunTime:0.0672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000238s ]
+

@@ -1,0 +1,93 @@
+<include file="Public:header"/>
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">接种管理</span></div>
+        </div>
+       
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th width="18%">接种疫苗信息</th>
+                            <th width="5%">接种人</th>
+                            <th width="8%">操作员</th>
+                             <th width="8%">录入员</th>
+                             <th width="61%">接种信息与操作</th>
+                        </tr>
+                        <volist name="data" id="vo">
+                        <tr>
+                            <td>
+								疫苗编号：{$vo.v_number}<br/>
+								疫苗名称：{$vo.v_id}<br/>
+								生产厂商：{$vo.v_firm}
+                            </td>
+                            <td>{$member.name}</td>
+                            <td>{$Think.session.user.name}</td>
+                            <td>{$vo.operator_id}</td>
+                            <td>
+								<input type="hidden" id="getid" value="{$vo.h_id}">
+								<button class="btn btn-primary btn2 mr10" id="do" onclick="show_check();">接种下一针</button>
+								<a href="javascript:void(0);" class="btn btn-primary btn2 mr10" onclick="check1({$vo.h_id});">删除此接种信息</a>
+								<table class="result-tab" width="100%">
+									<tr>
+										<th>接种计划</th><th>接种状况</th>
+									</tr>
+									<volist name="vo['planlist']" id="list">
+									<tr>
+										<td>{$list.info}</td>
+										<td>
+											<if condition ="$list.status eq 0">
+													<span>未接种</span>
+												<else/>
+													<span>已接种</span>
+											</if>
+										</td>
+									</tr>
+									</volist>
+								</table>
+                            </td>
+                        </tr>
+                        </volist>
+                      
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+<script>
+function show_check(){
+	if(window.confirm('是否继续？')){
+		$.post("{:U('edit')}",{id:$("#getid").val()},function(data){
+			var obj = eval(data);
+			alert(obj[info]);
+		})
+	}
+	else{
+		alert("操作取消");
+	}
+
+}
+function check1(data){
+	if(window.confirm('是否删除数据？')){
+		$.post("{:U('del')}",{h_id:data},function(data){
+				if(data=="ok"){
+					   window.location.reload();//刷新当前页面.
+				}
+				else{
+					alert("操作失败");
+				}
+				
+		});
+	}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<include file="Public:header"/>
+  <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Index/index')}">首页</a><span class="crumb-step">&gt;</span>信息操作<span class="crumb-step">&gt;</span>
+            <span>新增疫苗信息</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('do_add')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody><tr>
+                            <th width="120"><i class="require-red">*</i>疫苗名称：</th>
+                            <td>
+                               <input class="common-text required" id="title" name="type_name" size="50" value="" type="text" required="required">
+                            </td>
+                        </tr>
+                            
+                            <tr>
+                                <th>厂商：</th>
+                                <td>
+									<select name="firm" id="catid" class="required" required="required">
+										<option value="">请选择</option>
+										<volist name="firm" id="vo">
+										<option value="{$vo.firm_name}">{$vo.firm_name}</option>
+										</volist>
+									</select>
+                                </td>
+                            </tr>
+                             <tr>
+                                <th>种类：</th>
+                                <td>
+									<select name="type" id="catid" class="required" required="required">
+										<option value="">请选择</option>
+										<volist name="type" id="type">
+										<option value="{$type.vaccine}#{$type.code}">{$type.vaccine}</option>
+										</volist>
+									</select>
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <th>注射次数：</th>
+                                <td><input name="sum" id="sum" type="text" size="50" required="required"></td>
+                            </tr>
+                             <tr>
+                                <th>接种计划：</th>
+                                <td id="plan"></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+<script>
+$(document).ready(function(){
+	$("#sum").blur(function(){
+		for(var i =1;i<$("#sum").val();i++){
+			$("#plan").append("第"+(i+1)+"针：<input name='plan[]' id='' type='text' size='10' required='required'>天以后<br/>");
+		}
+	});
+
+});
+
+</script>
+</body>
+</html>

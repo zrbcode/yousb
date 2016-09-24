@@ -1,0 +1,47 @@
+<include file="Public:header"/>
+  <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Index/index')}">首页</a><span class="crumb-step">&gt;</span>信息操作<span class="crumb-step">&gt;</span>
+            <span>新增厂商信息</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('do_firm')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+						<tr>
+                            <th width="120"><i class="require-red">*</i>厂商名称：</th>
+                            <td>
+                               <input class="common-text required" id="title" name="firm_name" size="50" value="" type="text" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="120"><i class="require-red">*</i>厂商地址：</th>
+                            <td>
+                               <input class="common-text required" id="title" name="firm_address" size="50" value="" type="text" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="120"><i class="require-red">*</i>联系方式：</th>
+                            <td>
+                               <input class="common-text required" id="title" name="firm_phone" size="50" value="" type="text" required="required">
+                            </td>
+                        </tr>
+                         <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

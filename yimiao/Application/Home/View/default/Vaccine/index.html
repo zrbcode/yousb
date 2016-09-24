@@ -1,0 +1,59 @@
+<include file="Public:header"/>
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">疫苗管理</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="{:U('index')}" method="post">
+                    <table class="search-tab">
+                        <tr>
+							<input type="hidden" name="type" value="1">
+                            <th width="70">疫苗编号:</th>
+                            <td><input class="common-text" placeholder="疫苗编号" name="no" value="" id="" type="text"></td>
+                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="{:U('add_vaccine')}"><i class="icon-font"></i>新增疫苗数据</a>
+                    
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>编号</th>
+                            <th>疫苗名称</th>
+                            <th>生产厂商</th>
+                            <th>注射次数</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="data" id="vo">
+                        <tr>
+                            <td>{$vo.number}</td>
+                            <td title="">{$vo.type_name}</td>
+                            <td>{$vo.firm}</td>
+                            <td>{$vo.sum}</td>
+                            <td>
+                                <a class="link-update" href="{:U('Vaccine/chage_vaccine',array('v_id'=>$vo['v_id']))}">修改信息</a>
+                                <a class="link-del" href="{:U('Vaccine/del',array('v_id'=>$vo['v_id']))}">删除信息</a>
+                            </td>
+                        </tr>
+                        </volist>
+                      
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
