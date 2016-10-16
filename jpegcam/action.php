@@ -9,7 +9,7 @@ if (!$result) {
 $url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/pics/' . $filename;
 print "$url\n";
 
-
+echo "错误";
 
 
 ?>
