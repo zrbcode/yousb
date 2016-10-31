@@ -1,2 +1,6 @@
 PHP 写的 WebSocket 在线聊天室
-creata a new branch dev master ssaa 
+<<<<<<< HEAD
+creata a new branch aabbcc 
+=======
+creata a new branch featurel
+>>>>>>> featurel
