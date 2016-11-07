@@ -1,2 +1,4 @@
 #--coding:utf8--
-print '123'
+
+print '123abcdddd'
+
