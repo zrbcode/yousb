@@ -1,4 +1,5 @@
 #*--coding:utf8--*
+
 import sys
 string = sys.argv[1];
 i =0
